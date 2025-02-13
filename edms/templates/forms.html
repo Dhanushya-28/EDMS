@@ -1,0 +1,59 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div>
+    <main>
+    <section class="login-container">
+        <h2>Add New Associate to EDMS</h2>
+        <form class="login-form" action="#" method="POST">
+            {% csrf_token %}  
+            <div class="form-group">
+                <label for="id_name">Name</label>
+                <!-- <input type="text" id="text" name="text" placeholder="Enter your name" required/> -->
+                {{ form.name }} 
+            </div>
+            <div class="form-group">
+                <label for="id_contactNumber">Contact Number</label>
+                <!-- <input type="text" id="text" name="text" placeholder="Enter your number" required/> -->
+                {{ form.contactNumber }}
+            </div>
+            <div class="form-group">
+                <label for="id_qualification">Qualification</label>
+                <!-- <input type="text" id="text" name="text" placeholder="Enter your qualification" required/> -->
+                {{ form.qualification }}
+            </div>
+            <div class="form-group">
+                <label for="id_emailId">Email Id</label>
+                <!-- <input type="email" id="email" name="email" placeholder="Enter your email id" required/> -->
+                {{ form.emailId }}
+            </div>
+            <div class="form-group">
+                <label for="id_location">Location</label>
+                <!-- <input type="text" id="text" name="text" placeholder="Enter your location" required/> -->
+                {{ form.location  }}
+            </div>
+            <div class="form-group">
+                <label for="id_dateOfJoin">Date of Join</label>
+                <!-- <input type="date" id="date" name="date" placeholder="Enter your password" required/> -->
+                {{ form.dateOfJoin }} 
+            </div>   
+            <div class="form-group">
+                    <label for="id_departmentId">Department</label>
+                    <!-- <select>
+                        <option>Select your department</option>
+                        <option>Admin</option>
+                        <option>Hr</option>
+                        <option>Developer</option>
+                        <option>Tester</option>
+                        <option>Financial Analyst</option>
+                        <option>Marketing and Sales</option>
+                    </select> -->
+                    {{ form.departmentId }}
+            </div>           
+            <button type="submit" class="btn1">Create</button>
+        </form>
+    </section>
+</main>
+</div>
+
+{% endblock %} 

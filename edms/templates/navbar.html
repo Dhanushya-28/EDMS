@@ -1,0 +1,27 @@
+<header>
+    <nav class="navi">
+        
+        <div class="logo"><img src="../static/logo.png" style="border-radius: 50%; height:45px; width:50px; margin-right: 10px;">EDMS</div>
+        <ul class="navlink">
+            <li><a href="{% url 'home_view' %}">Home</a></li>
+        <li><a href="{% url 'about_view' %}" class="active">About Us</a></li>
+            <li><a href="{% url 'employee_form' %}">Add Associate</a></li>
+            <li><a href="{% url 'view_view' %}">View Associate</a></li>
+            <li class="dropdown1">
+                <a href="#">Departments</a>
+                <ul class="dropdownmenu">
+                    <li><a href="#">Admin</a></li>
+                    <li><a href="#">HR</a></li>
+                    <li><a href="#">Developer</a></li>
+                    <li><a href="#">Tester</a></li>
+                    <li><a href="#">Financial Analyst</a></li>
+                    <li><a href="#">Marketing & Sales</a></li>
+                </ul>
+            </li>
+            <li><a href="{% url 'contact_view' %}">Contact Us</a></li>
+            <li><a href="{% url 'login_view' %}" class="active">Login/SignUp</a></li>
+            <!-- <li><a href="{% url 'register_view' %}">Register</a></li> -->
+        </ul>
+    </nav>
+</header> 
+    

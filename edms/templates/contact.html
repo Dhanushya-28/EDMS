@@ -1,0 +1,62 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div>
+    <main class="aboutSection">
+        
+        <img src="https://www.etsindia.org/wp-content/uploads/2022/08/contact-us.jpg" height=600 weight=800 alt="Elegant building"  class="aboutImage">
+            <h2 class="top-right-text" style="color: #ddd;">Contact Us</h2>
+        <p><b>We'd love to hear from you! Get in touch with us for any queries or support.</b></p>
+    </main>
+   
+  <div class="design" style="margin-top: 2%; margin-bottom: 2%;">
+    <p>
+        At <strong>Employees Database Management System</strong>, we prioritize customer satisfaction. If you have any questions about our system, need technical support, or want to learn more about how we can help streamline your workforce management, please feel free to reach out to us. Our dedicated support team is available to assist you every step of the way.
+    </p>
+    <p>We are here to assist you! Reach out to us anytime for help, inquiries, or feedback.</p>
+  <main class="contactDetails">
+      <form id="contactForm" style="margin-top: 2%;">
+          <h2>Send Us a Message</h2>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Enter your full name" required/>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required/>
+
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Write your message here" required></textarea>
+
+          <button type="button" onclick="submitForm()">Submit</button>
+      </form>
+
+      <div class="contact-info">
+          <h2>Contact Information</h2>
+          <p><strong>Email:</strong> support@employeesdbms.com</p>
+          <p><strong>Phone:</strong> +1 800 123 4567</p>
+          <p><strong>Address:</strong> 123 Main Street, Suite 456, Tech City, TX 78901</p>
+          <p><strong>Business Hours:</strong></p>
+          <ul style="list-style-type: none;">
+              <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
+              <li>Saturday: 10:00 AM - 4:00 PM</li>
+              <li>Sunday: Closed</li>
+          </ul>
+          <p>Follow us on social media:</p>
+          <p class="contactDetails1">
+          <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                  <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook Icon"/>
+              </a>
+              <a href="https://www.twitter.com" target="_blank" class="social-icon">
+                  <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter Icon"/>
+              </a>
+              <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                  <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram Icon"/>
+              </a>
+              <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+                  <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn Icon"/>
+              </a>
+          </p>
+      </div>
+  </main>
+  </div>
+</div>
+{% endblock %} 

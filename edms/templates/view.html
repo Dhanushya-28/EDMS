@@ -1,0 +1,62 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="mb-3">   
+    <h3 class="text-center" style="margin-top: 1%;">
+        EDMS
+        <small class="text-body-secondary">Employee Data Management System Records</small>
+    </h3>
+</div>
+
+<div class="container mt-5" style="margin-bottom: 10%;">
+    <div >
+        <div>
+            <table class="ak">
+                <thead>
+                    <tr class="text-center">
+                        <th>NAME</th> 
+                        <th>CONTACT NUMBER</th> 
+                        <th>QUALIFICATION</th>
+                        <th>EMAIL ID</th>
+                        <th>LOCATION</th>
+                        <th>DATE OF JOIN</th>  
+                        <th>DEPARTMENT</th>                                        
+                        <th>ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody>                    
+                    {% for item in employeeList %}
+                    <tr>
+                        <td>{{item.name}}</td>
+                        <td>{{item.contactNumber}}</td>
+                        <td>{{item.qualification}}</td>
+                        <td>{{item.emailId}}</td>
+                        <td>{{item.location}}</td>
+                        <td>{{item.dateOfJoin}}</td>
+                        <td>{{item.departmentId.departmentName}}</td>
+                        <td >
+                            <div class="text-center">                                
+                                <form method="GET" action="{% url 'edit_employee' item.id %}" style="display: inline-block; margin: 0;">
+                                    {% csrf_token %}
+                                    <button class="btn-warning1 me-3" type="submit">
+                                        <i class="fas fa-edit"></i>  
+                                        Edit
+                                    </button>
+                                </form> 
+                                <form method="POST" action="{% url 'delete_employee' item.id %}" style="display: inline-block; margin: 0;">
+                                    {% csrf_token %}
+                                    <button class=" btn-danger1 me-3" type="submit">
+                                        <i class="fas fa-trash-alt"></i>   
+                                        Delete
+                                    </button>
+                                </form>
+                            </div>
+                        </td>   
+                     </tr>
+                    {% endfor %}                       
+                </tbody>                                   
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

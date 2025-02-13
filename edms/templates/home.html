@@ -1,0 +1,68 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div>
+        <!--  Hero Section   -->
+    <section class="heroSection">
+        <!-- <img src="../static/emp1.jpeg" alt="Employee banner"/> -->
+        <img src="https://white-rhino.co.uk/wp-content/uploads/2023/11/Strategic-team-building-1024x585.png">
+        <div class="heroText">
+        <h1>Welcome to the Employees Database Management System</h1>
+        <p style="color: white"><b>Efficient management of employee data made simple.</b></p>
+        <button>Started</button>
+        </div>
+    </section>
+    <main class="design" style="margin-top: 2%; margin-bottom: 2%;">
+        <h2>Manage Your Workforce</h2>
+        <p>This system allows you to:</p>
+            <ul>
+                <li>Add new employees to the database.</li>
+                <li>View and search for existing employee records.</li>
+                <li>Update employee details quickly and easily.</li>
+                <li>Delete outdated or incorrect employee data.</li>
+            </ul>
+            <a href="{% url 'about_view' %}" class="button" >Get Started</a>
+    
+
+        <section class="dashboard" style="margin-top: 2%;">
+            <h2 style="color: #001f3f;">Dashboard</h2>
+            <div class="card-container">
+            <div class="card">
+                <h3>Total Employees</h3>
+                <p>150</p>
+            </div>
+            <div class="card">
+                <h3>Departments</h3>
+                <p>5</p>
+            </div>
+            <div class="card">
+                <h3>New Hires</h3>
+                <p>5 This Month</p>
+            </div>
+            <div class="card">
+                <h3>Average Rating</h3>
+                <p>4.3/5</p>
+            </div>
+            </div>
+        </section>
+
+        <section class="updates">
+            <h2>Latest Updates</h2>
+            <div class="update-container">
+              <div class="update">
+                <h3>New Department Added</h3>
+                <p>The Marketing department has been added to the system. Employees can now update their department details.</p>
+              </div>
+              <div class="update">
+                <h3>Employee Training</h3>
+                <p>Upcoming training sessions on workplace safety scheduled for next week.</p>
+              </div>
+              <div class="update">
+                <h3>Policy Changes</h3>
+                <p>Updated leave policies effective from February 1, 2025. Check your employee handbook for details.</p>
+              </div>
+            </div>
+          </section>
+    </main>
+</div>
+{% endblock %} 
